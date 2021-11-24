@@ -7,14 +7,17 @@ HOST=$1
 
 if ! [ -x "$(command -v git)" ]; then
     echo "git not installed. install it."
+    exit 1
 fi
  
 if ! [ -x "$(command -v go)" ]; then
     echo "go not installed. install it."
+    exit 1
 fi
 
 if ! [ -x "$(command -v censys)" ]; then
     echo "censys command-line tool not installed. install it."
+    exit 1
 fi
 
 if [ ! -d "$NVDBINS" ]
